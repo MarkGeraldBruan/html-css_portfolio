@@ -1,0 +1,134 @@
+:root {
+  --font-main: Arial, sans-serif;
+  --color-bg: #ffffff;
+  --color-text: #222222;
+  --color-accent: #004aad;
+  --color-accent-light: #e6f0ff;
+  --spacing: 1rem;
+  --max-width: 900px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  text-decoration: underline;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-accent);
+  color: #fff;
+  padding: 0.5rem;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Header */
+.header {
+  background: var(--color-accent-light);
+  padding: var(--spacing);
+  display: flex;                
+  justify-content: space-between; 
+  align-items: center;          
+}
+
+.header__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header__nav ul {
+  list-style: none;
+  display: flex;
+  gap: var(--spacing);
+  margin: 0;   
+  padding: 0;  
+}
+
+
+/* Layout */
+main {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: var(--spacing);
+}
+
+/* About */
+.about__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing);
+}
+
+.about__image {
+  max-width: 170px;
+  border-radius: 20%;
+  border: 3px solid var(--color-accent);
+  object-fit: cover;
+}
+
+/* Projects */
+.projects {
+  margin-top: 3rem; 
+}
+
+.projects__grid {
+  display: grid;
+  gap: var(--spacing);
+  margin-top: var(--spacing);
+}
+
+.project-card {
+  border: 1px solid #ddd;
+  padding: var(--spacing);
+  border-radius: 8px;
+  background: #f9f9f9;
+  max-width: 100%;
+}
+
+.project-card__link {
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: var(--spacing);
+  background: var(--color-accent-light);
+  margin-top: 2rem;
+}
+
+@media (min-width: 600px) {
+  .about__content {
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .projects__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

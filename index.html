@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio – Mark Gerald B. Bruan</title>
+  <link rel="preload" href="css/styles.css" as="style">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Skip Link for Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="header">
+    <h1 class="header__title">Mark Gerald B. Bruan</h1>
+    <nav class="header__nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main id="main-content">
+    <!-- About Section -->
+    <section id="about" class="about">
+      <h2>About Me</h2>
+      <div class="about__content">
+        <!-- 🔽 Change the image here -->
+        <img src="assets/me.png" alt="Portrait of me" class="about__image">
+        <p>
+          Hello! I’m Mark Gerald B. Bruan, a BSIT student passionate about building clean, accessible, and functional websites. 
+          My focus is on learning modern web development practices while creating simple, user-friendly designs.
+        </p>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <h2>Projects</h2>
+      <div class="projects__grid">
+        <article class="project-card">
+          <h3>Bus Tracking System (E-Biyahe.PH)</h3>
+          <p>A web app for tracking buses in real-time to help commuters navigate easily.</p>
+          <a href="#" class="project-card__link">View Project</a>
+        </article>
+
+        <article class="project-card">
+          <h3>Portfolio Website</h3>
+          <p>A responsive personal site showcasing my work, built with only HTML & CSS.</p>
+          <a href="#" class="project-card__link">View Project</a>
+        </article>
+
+        <article class="project-card">
+          <h3>Inventory Manager</h3>
+          <p>A simple CRUD app that helps small shops manage product stocks efficiently.</p>
+          <a href="#" class="project-card__link">View Project</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+ 
+  <footer class="footer" id="contact">
+    <p>Contact me at <a href="mailto:bruanmb.654.@cdd.edu.ph">bruanmb.654.@cdd.edu.ph</a></p>
+    <p>&copy; <span id="year"></span> Mark Gerald B. Bruan</p>
+  </footer>
+
+  
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
